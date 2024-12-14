@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+:root{
+    --bg: #FEF3E2;
+    --board: #fdc86d;
+    --orange: #FA812F;
+    --red: #FA4032;
+    --red2: #ec3a2d;
+    --color1: lightblue;
+    --color2: lightgreen;
+    --color3: lightpink;
+    --black: black;
+    --white: white;
+}
+body{
+    background-color: var(--bg);
+}
+.container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 12px;
+    padding: 20px;
+}
+.board{
+    padding: 20px 0 15px 0;
+    min-height: 90vh;
+    border-radius: 6px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.listTitle{
+    font-size: 20px;
+    cursor: text;
+    margin: 0 60px 0 20px;
+}
+.listTitle:focus{
+    outline: none;
+}
+.inputSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    height: 2.3px;
+    background-color: var(--black);
+}
+.line1{
+    flex-grow: 1;
+}
+.line2{
+    width: 20px;
+}
+.addTask{
+    flex-grow: 0;
+    background-color: var(--white);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    font-size: 16px;
+    background-color: var(--red);
+    color: var(--white);
+}
+.addTask:active{
+    transform: translateY(2px);
+}
+.addTask:hover{
+    background-color: var(--red2);
+}
+.list{
+    padding: 0;
+    list-style: none;
+    flex: 1;
+    margin: 10px 20px 10px 20px;
+}
+.task{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 0;
+    padding-right: 10px;
+    gap: 10px;
+    background-color: var(--bg);
+    border-radius: 5px;
+    overflow: hidden;
+    min-height: 40px;
+}
+.taskTitle{
+    flex-grow: 1;
+    font-size: 14px;
+    padding: 10px 0 10px 0;
+}
+.taskTitle:focus{
+    outline: none;
+}
+.addList{
+    font-size: 38px;
+    height: 75px;
+    width: 75px;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    background-color: var(--red);
+    color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.addList:active{
+    transform: translateY(2px);
+}
+.addList:hover{
+    background-color: var(--red2);
+}
+.delBoardBtn{
+    align-self: end;
+    font-size: 16px;
+    margin-right: 20px;
+}
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+.dragged{
+    opacity: 0.4;
+}
+.footer{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 20px;
+    justify-content: space-between;
+}
+.taskCount{
+    font-size: 14px;
+}
+.dragBtn{
+    align-self: stretch;
+    background-color: var(--red);
+    padding: 0 13px 0 13px;
+    color: var(--white);
+}
+.colorPltBtn{
+    font-size: 18px;
+}
+.delete{
+    color: var(--red);
+}
+.color{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    outline: 2px solid var(--black);
+    margin-left: 3px;
+}
+.color1{
+    background-color: var(--color1);
+}
+.color2{
+    background-color: var(--color2);
+}
+.color3{
+    background-color: var(--color3);
+}
+.color4{
+    background-color: var(--board);
+}
